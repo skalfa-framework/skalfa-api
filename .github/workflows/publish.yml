@@ -1,0 +1,32 @@
+name: Publish to npm
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+
+      - name: Publish if version bumped
+        run: |
+          LOCAL_VER=$(node -p "require('./package.json').version")
+          NPM_VER=$(npm view @kava/kava-api version 2>/dev/null || echo "0.0.0")
+          if [ "$LOCAL_VER" != "$NPM_VER" ]; then
+            echo "Publishing @kava/kava-api $LOCAL_VER (Registry version: $NPM_VER)"
+            npm publish --access public
+          else
+            echo "@kava/kava-api is up to date ($LOCAL_VER)"
+          fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

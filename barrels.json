@@ -1,0 +1,10 @@
+{
+  "directory"  :  [
+    "app/models", 
+    "app/controllers", 
+    "app/routes"
+  ],
+  "delete"     :  true,
+  "exclude"    :  ["index.ts"],
+  "structure"  :  "flat"
+}

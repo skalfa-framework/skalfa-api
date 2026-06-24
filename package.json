@@ -2,38 +2,39 @@
   "name": "@skalfa/skalfa-api",
   "version": "1.0.1",
   "scripts": {
-    "dev"      :  "concurrently --raw \"bun run --watch app/app.ts\" \"bun skalfa watch:barrels\"",
-    "watch"    :  "bun run --watch app/app.ts",
-    "start"    :  "bun run app/app.ts",
-    "test"     :  "bun tsc --noEmit --ignoreDeprecations 6.0",
-    "lint"     :  "bunx eslint app/* utils/* database/*",
-    "barrels"  :  "bun run utils/commands/skalfa.ts barrels",
-    "skalfa"     :  "bun run utils/commands/skalfa.ts"
+    "dev": "concurrently --raw \"bun run --watch app/app.ts\" \"bun skalfa watch:barrels\"",
+    "watch": "bun run --watch app/app.ts",
+    "start": "bun run app/app.ts",
+    "test": "bun tsc --noEmit --ignoreDeprecations 6.0",
+    "lint": "bunx eslint app/* utils/* database/*",
+    "barrels": "bun run utils/commands/skalfa.ts barrels",
+    "skalfa": "bun run utils/commands/skalfa.ts"
   },
   "dependencies": {
     "@skalfa/skalfa-api-core": "^1.0.2",
-    "@skalfa/skalfa-orm"  :  "^1.0.0",
-    "bcrypt"          :  "^6.0.0",
-    "dotenv"          :  "^17.2.2",
-    "elysia"          :  "latest",
-    "knex"            :  "^3.1.0",
-    "pg"              :  "^8.16.3",
-    "nodemailer"      :  "^7.0.9",
-    "tsconfig-paths"  :  "^4.2.0",
-    "validator"       :  "^13.15.15",
-    "commander"       :  "^12.1.0"
+    "@skalfa/skalfa-orm": "^1.0.0",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.2",
+    "elysia": "^1.2.0",
+    "knex": "^3.1.0",
+    "pg": "^8.16.3",
+    "nodemailer": "^7.0.9",
+    "tsconfig-paths": "^4.2.0",
+    "validator": "^13.15.15",
+    "commander": "^12.1.0"
   },
   "devDependencies": {
-    "eslint"                            :  "^10.0.0",
-    "eslint-config-prettier"            :  "^10.1.8",
-    "@eslint/eslintrc"                  :  "eslint/eslintrc",
-    "@typescript-eslint/eslint-plugin"  :  "^8.55.0",
-    "@typescript-eslint/parser"         :  "^8.55.0",
-    "@types/bcrypt"                     :  "^6.0.0",
-    "@types/nodemailer"                 :  "^7.0.2",
-    "@types/validator"                  :  "^13.15.3",
-    "bun-types"                         :  "latest",
-    "barrelsby"                         :  "^2.8.1",
-    "concurrently"                      :  "^9.2.1"
-  }
+    "eslint": "^10.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "@eslint/eslintrc": "eslint/eslintrc",
+    "@typescript-eslint/eslint-plugin": "^8.55.0",
+    "@typescript-eslint/parser": "^8.55.0",
+    "@types/bcrypt": "^6.0.0",
+    "@types/nodemailer": "^7.0.2",
+    "@types/validator": "^13.15.3",
+    "bun-types": "latest",
+    "barrelsby": "^2.8.1",
+    "concurrently": "^9.2.1"
+  },
+  "description": "Premium backend starter template powered by Elysia and Bun, pre-configured with modular utilities."
 }

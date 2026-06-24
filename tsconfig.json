@@ -113,7 +113,8 @@
       "@utils"                   :  ["utils/index.ts"],
       "@utils/*"                 :  [
         "utils/*",
-        "node_modules/@kava/kava-api-core/dist/*"
+        "node_modules/@skalfa/skalfa-orm/dist/*",
+        "node_modules/@skalfa/skalfa-api-core/dist/*"
       ]
     }
   }

@@ -1,16 +1,18 @@
 {
-  "name": "@kava/kava-api",
-  "version": "1.0.0",
+  "name": "@skalfa/skalfa-api",
+  "version": "1.0.1",
   "scripts": {
-    "dev"      :  "concurrently --raw \"bun run --watch app/app.ts\" \"bun barrels\"",
+    "dev"      :  "concurrently --raw \"bun run --watch app/app.ts\" \"bun skalfa watch:barrels\"",
     "watch"    :  "bun run --watch app/app.ts",
     "start"    :  "bun run app/app.ts",
     "test"     :  "bun tsc --noEmit --ignoreDeprecations 6.0",
     "lint"     :  "bunx eslint app/* utils/* database/*",
-    "barrels"  :  "bun run utils/commands/barrels.ts"
+    "barrels"  :  "bun run utils/commands/skalfa.ts barrels",
+    "skalfa"     :  "bun run utils/commands/skalfa.ts"
   },
   "dependencies": {
-    "@kava/kava-api-core": "^1.0.1",
+    "@skalfa/skalfa-api-core": "^1.0.2",
+    "@skalfa/skalfa-orm"  :  "^1.0.0",
     "bcrypt"          :  "^6.0.0",
     "dotenv"          :  "^17.2.2",
     "elysia"          :  "latest",
@@ -18,7 +20,8 @@
     "pg"              :  "^8.16.3",
     "nodemailer"      :  "^7.0.9",
     "tsconfig-paths"  :  "^4.2.0",
-    "validator"       :  "^13.15.15"
+    "validator"       :  "^13.15.15",
+    "commander"       :  "^12.1.0"
   },
   "devDependencies": {
     "eslint"                            :  "^10.0.0",

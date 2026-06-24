@@ -7,7 +7,7 @@ import {
     UserController,
 } from '@controllers'
 
-export const routes = (app: Elysia) => app.group('/api', (route) => {
+export const routes = (app: any) => app.group('/api', (route: any) => {
     route.get('/', BaseController.index)
     route.get('/features', BaseController.feature)
     route.get('/accesses', BaseController.access)

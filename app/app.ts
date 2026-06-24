@@ -30,18 +30,28 @@ if (process.env.DB_HOST && process.env.DB_PORT && process.env.DB_USERNAME && pro
 // =====================================>
 // ## Init: database olap
 // =====================================>
+// if (process.env.DA_HOST && process.env.DA_PORT && process.env.DA_USERNAME && process.env.DA_PASSWORD && process.env.DA_DATABASE) {
+//   daClient.ping();
+//   logger.start(`Database (OLAP) connected ${process.env.DA_DATABASE}!`)
+// }
 
 
 // =====================================>
-// ## Init: redis & queue (optional extensions)
+// ## Init: redis
 // =====================================>
-// To use Redis cache in auth, install @kava/redis extension and register it:
-// import { redis } from '@kava/redis'
-// registry.register('redis', redis)
+// if (process.env.REDIS_HOST && process.env.REDIS_PORT) {
+//   redis.on("connect", () => {
+//     logger.start(`Redis connected ${process.env.REDIS_HOST}:${process.env.REDIS_PORT}!`)
+//   })
+// 
+//   redis.on("error", (err) => {
+//     const em = err instanceof Error ? err.message : String(err)
+//     logger.error(`Redis error: ${em}`, { error: em })
+//   })
+// }
 
-// To use Queue in logger / auth utilities, register your queue runner/extension:
-// import { queue } from '@kava/queue'
-// registry.register('queue', queue)
+
+
 
 
 // =====================================>

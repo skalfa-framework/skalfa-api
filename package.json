@@ -1,6 +1,6 @@
 {
   "name": "@skalfa/skalfa-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "dev": "concurrently --raw \"bun run --watch app/app.ts\" \"bun skalfa watch:barrels\"",
     "watch": "bun run --watch app/app.ts",
@@ -11,8 +11,8 @@
     "skalfa": "bun run utils/commands/skalfa.ts"
   },
   "dependencies": {
-    "@skalfa/skalfa-api-core": "^1.0.2",
-    "@skalfa/skalfa-orm": "^1.0.0",
+    "@skalfa/skalfa-api-core": "^1.0.8",
+    "@skalfa/skalfa-orm": "^1.0.3",
     "bcrypt": "^6.0.0",
     "dotenv": "^17.2.2",
     "elysia": "^1.2.0",

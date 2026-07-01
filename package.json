@@ -1,14 +1,13 @@
 {
   "name": "@skalfa/skalfa-api",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
-    "dev": "concurrently --raw \"bun run --watch app/app.ts\" \"bun skalfa watch:barrels\"",
+    "dev": "concurrently --raw 'bun run --watch app/app.ts' 'bun skalfa watch:barrels'",
     "watch": "bun run --watch app/app.ts",
     "start": "bun run app/app.ts",
-    "test": "bun tsc --noEmit --ignoreDeprecations 6.0",
-    "lint": "bunx eslint app/* utils/* database/*",
-    "barrels": "bun run utils/commands/skalfa.ts barrels",
-    "skalfa": "bun run utils/commands/skalfa.ts"
+    "skalfa": "bun run utils/commands/skalfa.ts",
+    "test": "bun tsc --noEmit",
+    "lint": "bunx eslint app/* database/*"
   },
   "dependencies": {
     "@skalfa/skalfa-api-core": "^1.0.8",

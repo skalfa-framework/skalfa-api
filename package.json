@@ -1,6 +1,6 @@
 {
   "name": "@skalfa/skalfa-api",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "scripts": {
     "dev": "concurrently --raw 'bun run --watch app/app.ts' 'bun skalfa watch:barrels'",
     "watch": "bun run --watch app/app.ts",
@@ -35,5 +35,6 @@
     "barrelsby": "^2.8.1",
     "concurrently": "^9.2.1"
   },
-  "description": "Premium backend starter template powered by Elysia and Bun, pre-configured with modular utilities."
+  "description": "Premium backend starter template powered by Elysia and Bun, pre-configured with modular utilities.",
+  "license": "MIT"
 }
